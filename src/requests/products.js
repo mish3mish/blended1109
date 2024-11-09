@@ -1,5 +1,12 @@
 import apiInstance from '../services/api';
 
+const BASE_URL = 'https://dummyjson.com'
+
 export function getProducts() {
-  return fetch('https://dummyjson.com/products').then(res => res.json());
+  return fetch(`${BASE_URL}/products`).then(res => res.json());
 }
+
+export function getProductByID(id) {
+  return fetch(`${BASE_URL}/products/${id}`).then(res => res.json());
+}
+

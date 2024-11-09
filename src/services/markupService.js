@@ -12,3 +12,14 @@ export function createMarkupProducts(arr) {
     })
     .join('');
 }
+
+export function createMarkupSingleProduct({ thumbnail, title, price, rating }) {
+  return `
+  <div class="product-item">
+          <img src="${thumbnail}" alt="${title} width="200" height="200>
+          <h3 class="product-title">${title}</h3>
+          <p class="product-price">${price}</p>
+          <p class="product-rating">${rating}</p>
+        </div>
+  `;
+}
